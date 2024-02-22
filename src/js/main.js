@@ -12,7 +12,9 @@ const elements = {
     city: document.querySelector('#city'),
     gitUrl: document.querySelector('#gitUrl'),
     twit: document.querySelector('#twit'),
-    work: document.querySelector('#work')
+    work: document.querySelector('#work'),
+    userAvatar:document.querySelector('#user-avatar'),
+    themeSwitch:document.querySelector('#theme-switch')
   };
   
   function displayUserData(data) {
@@ -27,6 +29,7 @@ const elements = {
     elements.gitUrl.textContent = data.html_url || elements.gitUrl.textContent;
     elements.twit.textContent = data.twitter_username || elements.twit.textContent;
     elements.work.textContent = data.hireable || elements.work.textContent;
+    elements.userAvatar.src = data.avatar_url;
   }
   
   function formatDate(dateTimeString) {
@@ -57,3 +60,14 @@ const elements = {
   }
   
   document.querySelector('#button-addon2').addEventListener('click', handleSearchButtonClick);
+
+  elements.themeSwitch.addEventListener("click", () => {
+    const currentTheme = document.body.className;
+    if (currentTheme === 'light-theme') {
+        document.body.className = 'dark-theme';
+        elements.themeSwitch.textContent = "dark";
+    } else {
+        document.body.className = 'light-theme';
+        elements.themeSwitch.textContent = "light";
+    }
+});
