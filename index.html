@@ -9,12 +9,18 @@
     <div id="app" class="container-sm mt-2">
       <div class="app-header d-flex justify-content-between align-self-center">
         <h1>devfinder</h1>
-        <button class="app-theme" id="theme-switch">light</button>
+        <button class="app-theme" id="theme-switch">dark</button>
       </div>
       <div class="app-form mt-3">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" id="app-input" placeholder="Search GitHub username..." aria-label="Search GitHub username..." aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+          <div class="input-group">
+            <input type="text" class="form-control" id="app-input" placeholder="Search GitHub username..." aria-label="Search GitHub username...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit"  id="button-addon2">
+                  <i class="fa fa-search">Search</i>
+              </button>
+            </span>
+          </div>
         </div>
       </div>
       <div class="app-content mt-4">
@@ -28,7 +34,7 @@
             <div class="card-subtitle" id="blog">Card sub title</div>
             <p class="card-text" id="bio">This profile has no bio.</p>
             <div class="container text-center mt-1">
-              <div class="row bg-info-subtle p-3 rounded">
+              <div class="row p-3 rounded info">
                 <div class="col">
                   Repos <br/>
                   <span id="repos">999</span>

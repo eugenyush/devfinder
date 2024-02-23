@@ -15,12 +15,42 @@ body{
     font: 1em VariableFont;
 
     &.light-theme{
-        background-color: #ffffff;
+        background-color: #F5F8FF;
         color: #000000;
+
+        .info{
+            background-color: #F5F8FF;
+          }
+        .app-theme{
+            background-color: #d4d9e6;
+            color: #000000;
+          }
     }
 
     &.dark-theme{
-        background-color: #000000;
+        background-color: #141C2F;
         color: #ffffff;
+
+        .card {
+            background-color: #1F2A48;
+            color: #ffffff; 
+          }
+        .info{
+            background-color: #141C2F;
+          }
+        .app-theme{
+            background-color: #0b1a3f;
+            color: #ffffff;
+          }
     }
+
+    .btn{
+        background-color: #0079FE;
+        color: #ffffff;
+
+        &:hover{
+            background-color: #0063d5;
+            color: #ffffff;
+        }
+      }
 }
