@@ -55,19 +55,29 @@ const elements = {
         displayUserData(data);
       })
       .catch(error => {
-        handleError(error);
+        if (error.message === 'Network response was not ok') {
+          console.error('User not found');
+          displayErrorMessage('User not found');
+        } else {
+          console.error('Network error:', error.message);
+          displayErrorMessage('Network error');
+        }
       });
-  }
-  
+}
+
+function displayErrorMessage(message) {
+  alert(message);
+}
+
   document.querySelector('#button-addon2').addEventListener('click', handleSearchButtonClick);
 
   elements.themeSwitch.addEventListener("click", () => {
     const currentTheme = document.body.className;
     if (currentTheme === 'light-theme') {
         document.body.className = 'dark-theme';
-        elements.themeSwitch.textContent = "dark";
+        elements.themeSwitch.textContent = "light";
     } else {
         document.body.className = 'light-theme';
-        elements.themeSwitch.textContent = "light";
+        elements.themeSwitch.textContent = "dark";
     }
 });
