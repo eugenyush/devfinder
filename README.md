@@ -1,27 +1,55 @@
-# Project form for devfinder
-Small pet-project
 
-This project was bootstrapped with ViteJS
+# DevFinder - A GitHub Profile Search App
 
-# Available Scripts
+**DevFinder** is a React-based web application that allows users to search for GitHub profiles. It provides details such as repositories, followers, and other profile information, making it easier to discover and explore GitHub developers.
 
-In the project directory, you can run:
+It is built using:
 
-## npm run dev 
+- **React**
+- **GitHub API** (to fetch user data)
+- **JavaScript**
+- **CSS** (for styling)
 
-Runs the app in the development mode.
-Open http://localhost to view it in the browser.
+## 👾 Features
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+- Search for GitHub users by username.
+- Display detailed user profiles with followers, repository count, and bio.
+- Fully responsive design optimized for desktop and mobile.
+- Error handling for invalid usernames or API issues.
+- Light and dark mode toggle for better user experience.
 
-## npm run build
+## 📒 Process
 
-By default, the build output will be placed at dist. 
-You may deploy this dist folder to any of your preferred platforms.
+I started by setting up the basic structure of the application with React. Next, I connected the app to the GitHub API, enabling the user to search for profiles by username. 
 
-## npm run preview
+Once the API integration was completed, I focused on designing a clean and responsive interface using CSS. The app includes error handling for cases where a user is not found, and additional features like dark mode for improved user experience.
 
-The vite preview command will boot up a local 
-static web server that serves the files from dist at http://localhost:4173. 
-It's an easy way to check if the production build looks OK in your local environment.
+**NOTE:** The application uses the public GitHub API to fetch user data in real-time.
+
+## 🚦 Running the Project
+
+To run the project in your local environment, follow these steps:
+
+1. **Clone the repository to your local machine**:
+   
+   ```bash
+   git clone https://github.com/eugenyush/devfinder.git
+   cd devfinder
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the project**:
+
+   ```bash
+   npm start
+   ```
+
+   The app will run on [http://localhost:3000](http://localhost:3000).
+
+## 📹 Video
+
