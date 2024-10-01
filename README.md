@@ -52,4 +52,3 @@ To run the project in your local environment, follow these steps:
    The app will run on [http://localhost:3000](http://localhost:3000).
 
 ## 📹 Video
-
